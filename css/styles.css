@@ -38,7 +38,7 @@ margin: auto;
     background-color: #b9c3b9;
 }
 .empty-lft, .empty-rht {
-    background-color: white;
+    background-color: #e2dfc4;
 }
 .hero-one, .hero-two {
     font-size: 24px;
@@ -85,13 +85,10 @@ margin: auto;
 
 .empty-rht {
     grid-area: empty-rht;
-    background-color: white;
-
 }
 
 .empty-lft {
     grid-area: empty-lft;
-    background-color: white;
 }
 
 .hero-one {
@@ -130,7 +127,7 @@ margin: auto;
             'empty-lft hero-two empty-rht'
             'empty-lft intro-two empty-rht'
             'footer footer footer';
-        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-columns: 1fr 10fr 1fr;
         grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr 1fr;
     }
 }
@@ -142,7 +139,7 @@ margin: auto;
             'empty-lft hero-one intro-one empty-rht'
             'empty-lft intro-two hero-two empty-rht'
             'footer footer footer footer ';
-        grid-template-columns: 1fr 5fr 5fr 1fr;
+        grid-template-columns: 1fr 10fr 10fr 1fr;
         grid-template-rows:  0.7fr 4fr 4f 2fr;
     }
 }
