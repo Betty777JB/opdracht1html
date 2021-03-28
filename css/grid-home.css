@@ -1,0 +1,49 @@
+/* =========================================================== */
+/* Grid opmaak voor de Home pagina */
+/* =========================================================== */
+
+
+.container {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    /* max-width: 1140px; */
+    margin: 0px auto;
+    grid-gap: 10px;
+    text-align: center;
+    grid-template-areas:
+        "header header header"
+        "empty-lft hero-one empty-rht"
+        "empty-lft intro-one empty-rht"
+        "empty-lft hero-two empty-rht"
+        "empty-lft intro-two empty-rht"
+        "footer footer footer";
+        grid-template-columns: 1fr 30fr 1fr;
+        grid-template-rows: 100px 1fr 1fr 1fr 1fr 70px;
+}
+
+@media screen and (min-width:768px) {
+    .container {
+        grid-template-areas:
+            "header header header"
+            "empty-lft hero-one empty-rht"
+            "empty-lft intro-one empty-rht"
+            "empty-lft hero-two empty-rht"
+            "empty-lft intro-two empty-rht"
+            "footer footer footer";
+        grid-template-columns: 1fr 8fr 1fr;
+        grid-template-rows: 100px 1fr 1fr 1fr 1fr 70px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .container {
+        grid-template-areas:
+            "header header header header"
+            "empty-lft hero-one intro-one empty-rht"
+            "empty-lft intro-two hero-two empty-rht"
+            "footer footer footer footer";
+        grid-template-columns: 1fr 4fr 4fr 1fr;
+        grid-template-rows: 100px 1fr 1fr 70px;
+    }
+}

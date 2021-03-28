@@ -1,0 +1,43 @@
+/* =========================================================== */
+/* Grid opmaak voor de Contact pagina */
+/* (Bijna zelfde als Blog Grid, maar nu is de hoofd cel smaller om het Form mooi te centreren) */
+/* =========================================================== */
+
+
+.container {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    /* max-width: 1140px?; */
+    margin: 0px auto;
+    grid-gap: 10px;
+    text-align: center;
+    grid-template-areas:
+        "header header header"
+        "empty-lft contact-container empty-rht"
+        "footer footer footer";
+        grid-template-columns: 1fr 300px 1fr;
+        grid-template-rows: 100px 1fr 70px;
+}
+
+@media screen and (min-width:768px) {
+    .container {
+        grid-template-areas:
+            "header header header"
+            "empty-lft contact-container empty-rht"
+            "footer footer footer";
+        grid-template-columns: 1fr 300px 1fr;
+        grid-template-rows: 100px 1fr 70px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .container {
+        grid-template-areas:
+            "header header header"
+            "empty-lft contact-container empty-rht"
+            "footer footer footer";
+        grid-template-columns:1fr 300px 1fr;
+        grid-template-rows: 100px 1fr 70px;
+    }
+}

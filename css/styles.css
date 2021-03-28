@@ -3,34 +3,10 @@
     line-height: 1.3;
 }
 
-html {
+body, html {
     box-sizing: border-box;
+    font-family: 'Montserrat', 'sans-serif';
     /* font-family: straks opgeven */
-}
-
-.container {
-    display: grid;
-    width: 100%;
-    height: 100vh;
-    /* max-width: 1140px; */
-    margin: 0px auto;
-    grid-template-columns: 0.1fr 4fr 0.1fr;
-    grid-template-rows: 0.7fr 3fr 4fr 2fr 2fr 1fr;
-    grid-gap: 10px;
-    text-align: center;
-    grid-template-areas:
-        "header header header"
-        "empty-lft hero-one empty-rht"
-        "empty-lft intro-one empty-rht"
-        "empty-lft hero-two empty-rht"
-        "empty-lft intro-two empty-rht"
-        "footer footer footer";
-}
-.cat-img{
-height:auto ;
-width: 100px;
-margin: auto;
-
 }
 .header, .footer {
     font-size: 24px;
@@ -38,7 +14,21 @@ margin: auto;
     background-color: #b9c3b9;
 }
 .empty-lft, .empty-rht {
-    background-color: #e2dfc4;
+    background-image: linear-gradient(to bottom, #b9c3b9, white);
+    border-style: solid;
+    border-width: 1px;
+    border-color: #b9c3b9;
+}
+
+@media screen and (min-width:768px) {
+    .empty-lft, .empty-rht {
+        background-image: url("../images/lynx.png"), linear-gradient(to bottom, #b9c3b9, white);
+        /* NB: 2 achtergronden; een plaatje en een gradient overelkaar*/
+        background-size: 75px, contain;
+        background-position: center;
+        background-repeat: repeat-y;
+        background-blend-mode: soft-light; /*laat zwarte footprints als donkere tint verschijnen over gradient*/
+    }
 }
 .hero-one, .hero-two {
     font-size: 24px;
@@ -49,17 +39,37 @@ margin: auto;
     font-size: 24px;
     padding: 50px 10px;
     background-color: #b9c3b9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
+.blog-container, .contact-container {
+    font-size: 12px;
+    padding: 10px;
+    background-color: #b9c3b9;
+}
 .header {
     /* background: #7f1a40; */
     grid-area: header;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    padding: 10px;
+    justify-content: space-between;
+    padding-top: 0px;
 }
+.cat-img{
+height:auto ;
+width: 100px;
+margin: auto;
+
+}
+
+/* .empty-lft, .empty-rht {
+    background-color: #e2dfc4;
+} */
+
+
+
 
 .navbar {
     /* grid-area: navbar; */
@@ -76,11 +86,15 @@ margin: auto;
 }
 
 .navbar li {
-    margin-left: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* margin-left: 30px; */
 }
 
 .logo {
     color: white;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .empty-rht {
@@ -97,9 +111,9 @@ margin: auto;
 
 .intro-one {
     grid-area: intro-one;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: center; */
 }
 
 .hero-two {
@@ -108,17 +122,45 @@ margin: auto;
 
 .intro-two {
     grid-area: intro-two;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
+    justify-content: center; */
+}
+.giphies {
+    display: flex;
     justify-content: center;
+    padding: 20px;
+}
+
+.giphy-embed {
+    width: 100px;
+    margin: auto;
 }
 
 .footer {
     grid-area: footer;
 
 }
+.footer a {
+    font-size: 48px;
+    text-decoration: none;
+    color: white;
+}
 
+
+/* Footprints alleen bij grotere schermen */
 @media screen and (min-width:768px) {
+    .empty-left, .empty-right {
+        background-image: url("../images/lynx.png"), linear-gradient(to bottom, #b9c3b9, white);
+        /* NB: 2 achtergronden; een plaatje en een gradient overelkaar*/
+         background-size: 75px, contain;
+        background-position: center;
+        background-repeat: repeat-y;
+        background-blend-mode: soft-light;/*laat zwarte footprints als donkere tint verschijnen over gradient*/
+    }
+}
+
+/* @media screen and (min-width:768px) {
     .container {
         grid-template-areas:
             'header header header'
@@ -130,9 +172,9 @@ margin: auto;
         grid-template-columns: 1fr 10fr 1fr;
         grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr 1fr;
     }
-}
+} */
 
-@media screen and (min-width:900px) {
+/* @media screen and (min-width:900px) {
     .container {
         grid-template-areas:
             'header header header header '
@@ -141,6 +183,14 @@ margin: auto;
             'footer footer footer footer ';
         grid-template-columns: 1fr 10fr 10fr 1fr;
         grid-template-rows:  0.7fr 4fr 4f 2fr;
+    }
+}
+
+* Logo naast navbar op grotere schermen (bij mobile was onder elkaar) */
+@media screen and (min-width:768px) {
+    .header {
+        flex-direction: row;
+        padding-top: 10px;
     }
 }
 

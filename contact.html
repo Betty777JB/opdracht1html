@@ -5,80 +5,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/styles.css">
+     <link rel="stylesheet" href="css/grid-contact.css">
+    <!-- <link rel="stylesheet" href="css/video.css"> -->
     <title>contact</title>
 </head>
 
 <body>
-<form name="contact" method="POST" data-netlify="true">
+    <div class="container">
 
-    <form>
-        <p><label>Name: <input type="text" name="name" /></label></p>
-        <p><label>Emailadres: <input type="email" name="email" /></label></p>
-        <p><label>Telephone-number:<input type="number" name="number"/></label></p>
-        <p><label>Age:<input type="number" name="number"/></label></p>
-        <p><label>Birth date:<input type="date" name="birth date" /></label></p>
+        <div class="header">
+            <h1 class="logo">Meouw</h1>
+            <ul class="navbar">
+                <li><a href="index.html">home</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <li><a href="intro.html">intro</a></li>
+            </ul>
+        </div>
 
-  <p>Male:<input type="radio" name="gender" value="Male"></p>
-  <p>Female:<input type="radio" name="gender" value="Female"></p>
-  <p>Other: <input type="radio"  name="gender" value="Other"></p>
-<h1>Favorite cuisine</h1>
- <input type="checkbox" name="frans" value="frans">
- <label> frans</label><br>
- <input type="checkbox" name="italiaans" value="frans">
- <label> italiaans</label><br>
- <input type="checkbox" name="spaans" value="frans">
- <label> spaans</label><br>
- <input type="checkbox" name="arabisch" value="frans">
- <label> arabisch</label><br>
- <p>Favorite color short:</p>
+        <div class="empty-lft"></div>
+        <div class="empty-rht"></div>
 
- <div>
-     <input type="color" id="head" name="head"
-            value="#e66465">
-     <label for="head">Head</label>
- </div>
 
- <div>
-     <input type="color" id="body" name="body"
-             value="#f6b73c">
-     <label for="body">Body</label>
- </div>
-<p><label>biografie:<textarea name="recept"></textarea></label></p>
+        <div class="contact-container">
+            <form name="contact" method="POST" data-netlify="true">
 
- <p><label for="avatar">Choose a profile picture:</label></p>
-<input type="file" name="avatar"
-       accept="image/png, image/jpeg">
+                <p><label>Name: <input type="text" name="name" /></label></p>
+                <p><label>Emailadres: <input type="email" name="email" /></label></p>
+                <p><label>Telephone-number:<input type="number" name="number" /></label></p>
+                <br>
+                <p>Male:<input type="radio" name="gender" value="Male"></p>
+                <p>Female:<input type="radio" name="gender" value="Female"></p>
+                <p>Other: <input type="radio" name="gender" value="Other"></p>
+                <p><label>Age:<input type="number" name="number" /></label></p>
+                <p><label>Birth date:<input type="date" name="birth date" /></label></p>
+                <br>
+                <p><label for="url">Website</label></p>
+                <input type="url" name="url" id="url" placeholder="https://www.MyCatWebsite.com" pattern="https://.*" size="30" required>
+                <br>
+                <br>
+                <h1>Favorite Food</h1>
+                <input type="checkbox" name="meat" value="meat">
+                <label> Meat</label><br>
+                <input type="checkbox" name="fish" value="fish">
+                <label> Fish</label><br>
+                <input type="checkbox" name="can food" value="can food">
+                <label> Can Food</label><br>
+                <input type="checkbox" name="dry food" value="dry food">
+                <label> Dry Food</label><br>
+                <br>
+                <p>Favorite colors:</p>
+                <div>
+                    <input type="color" id="toys" name="toys" value="#e66465">
+                    <label for="head">for Toys</label>
+                </div>
+                <div>
+                    <input type="color" id="pillow" name="pillow" value="#f6b73c">
+                    <label for="body">for Pillow</label>
+                </div>
+                <br>
+                <p><label>Biografie:<textarea name="recept"></textarea></label></p>
+                <br>
+                <p><label for="avatar">Choose a profile picture:</label></p>
+                <input type="file" name="avatar" accept="image/png, image/jpeg">
 
- <p><label for="url">Enter an https:// URL:</label></p>
-  <input type="url" name="url" id="url"
-      placeholder="https://example.com"
-      pattern="https://.*" size="30"
-      required>
-      <div class="controls">
+                <p><label for="id">User ID:</label></p>
+                <input type="text" id="id" name="id" /></p>
+                <br>
+                <div class="controls">
+                    <p><input type="reset" value="Reset"> </p>
+                    <p><input type="submit" value="Submit"> </p>
+                    <input type="submit" value="Send Request">
+                </div>
 
-            <p><label for="id">User ID:</label></p>
-            <input type="text" id="id" name="id" /></p>
+            </form>
+        </div>
 
-              <p><input type="reset" value="Reset"> </p>
-              <p><input type="submit" value="Submit"> </p>
-
+        <div class="footer">
+                    <!-- NB: target="_blank" opent in nieuwe tab -->
+                    <!-- NB: rel="noopener noreferrer" is beveiliging tegen msbruik -->
+                    <a href="http://facebook.com" class=" fa fa-facebook" target="_blank" rel="noopener noreferrer"></a>
+                    <a href="http://youtube.com" class=" fa fa-youtube" target="_blank" rel="noopener noreferrer"></a>
+                    <a href="http://instagram.com" class=" fa fa-instagram" target="_blank" rel="noopener noreferrer"></a>
+                </div>
          </div>
-         <input type="submit" value="Send Request">
-
-
-</form>
-
-    <!-- <p><label>Name: <input type="text" name="name" /></label></p>
-    <p><label>Emailadres: <input type="email" name="email" /></label></p>
-    <p><label>lang bericht met een recept: <textarea name="recept"></textarea></label></p>
-    <h1>ik ben contact.html</h1>
-    <a href="index.html" style="font-size: 32px;">terug naar index.html</a>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, quas?</p>
-    <img src="images/Betty Boo.jpg" alt="mijn foto" width="250px" height="auto">
-    <p><button type="submit">Send</button></p>
-</form> -->
-
-
-</body>
-
+    </body>
 </html>
