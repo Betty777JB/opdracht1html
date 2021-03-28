@@ -6,7 +6,6 @@
 .blog-container {
     display: flex;
     justify-content: center;
-    justify-content: flex-flex-start;
     flex-wrap: wrap;
 }
 
