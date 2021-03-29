@@ -20,16 +20,7 @@ body, html {
     border-color: #b9c3b9;
 }
 
-@media screen and (min-width:768px) {
-    .empty-lft, .empty-rht {
-        background-image: url("../images/lynx.png"), linear-gradient(to bottom, #b9c3b9, white);
-        /* NB: 2 achtergronden; een plaatje en een gradient overelkaar*/
-        background-size: 75px, contain;
-        background-position: center;
-        background-repeat: repeat-y;
-        background-blend-mode: soft-light; /*laat zwarte footprints als donkere tint verschijnen over gradient*/
-    }
-}
+
 .hero-one, .hero-two {
     font-size: 24px;
     padding: 10px;
@@ -118,14 +109,22 @@ margin: auto;
 .giphies {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 20px, 0px;
 }
 
 .giphy-embed {
-    width: 100px;
+    width: 80px;
     margin: auto;
 }
-
+ @media screen and (min-width: 768px) {
+    .giphy-embed   {
+        width: 100px;
+        margin: auto;
+    }
+    .hero-img{
+        width: 400px;
+    }
+ }
 .footer {
     grid-area: footer;
 
@@ -135,19 +134,16 @@ margin: auto;
     text-decoration: none;
     color: white;
 }
-
-/* Footprints alleen bij grotere schermen */
 @media screen and (min-width:768px) {
     .empty-lft, .empty-rht {
         background-image: url("../images/lynx.png"), linear-gradient(to bottom, #b9c3b9, white);
         /* NB: 2 achtergronden; een plaatje en een gradient overelkaar*/
-         background-size: 75px, contain;
+        background-size: 75px, contain;
         background-position: center;
         background-repeat: repeat-y;
-        background-blend-mode: soft-light;/*laat zwarte footprints als donkere tint verschijnen over gradient*/
+        background-blend-mode: soft-light; /*laat zwarte footprints als donkere tint verschijnen over gradient*/
     }
 }
-
 
 /*Logo naast navbar op grotere schermen (bij mobile was onder elkaar) */
 @media screen and (min-width:768px) {
