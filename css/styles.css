@@ -6,14 +6,14 @@
 body, html {
     box-sizing: border-box;
     font-family: "Montserrat", "sans-serif";
-
-
 }
+
 .header, .footer {
     font-size: 24px;
     padding: 10px;
     background-color: #b9c3b9;
 }
+
 .empty-lft, .empty-rht {
     background-image: linear-gradient(to bottom, #b9c3b9, white);
     border-style: solid;
@@ -21,27 +21,6 @@ body, html {
     border-color: #b9c3b9;
 }
 
-
-.hero-one, .hero-two {
-    font-size: 24px;
-    padding: 10px;
-    background-color: #b9c3b9;
-    /* border: solid, 0px; */
-    border-radius: 20px;
-}
-.intro-one, .intro-two {
-    font-size: 24px;
-    padding: 50px 10px;
-    background-color: #b9c3b9;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.blog-container, .contact-container {
-    font-size: 12px;
-    padding: 10px;
-    background-color: #b9c3b9;
-}
 .header {
     /* background: #7f1a40; mooi kleur*/
     grid-area: header;
@@ -51,15 +30,8 @@ body, html {
     justify-content: space-between;
     padding-top: 0px;
 }
-.cat-img{
-height:auto ;
-width: 100px;
-margin: auto;
-
-}
 
 .navbar {
-
     list-style: none;
     margin: 0;
     padding: 0;
@@ -75,7 +47,6 @@ margin: auto;
 .navbar li {
     margin-left: 10px;
     margin-right: 10px;
-
 }
 
 .logo {
@@ -84,8 +55,138 @@ margin: auto;
     margin-right: 10px;
 }
 
-.empty-rht {
-    grid-area: empty-rht;
+.footer {
+    grid-area: footer;
+}
+
+.footer a {
+    font-size: 48px;
+    text-decoration: none;
+    color: white;
+}
+
+/*Logo naast navbar op grotere schermen (bij mobile was onder elkaar) */
+@media screen and (min-width:768px) {
+    .header {
+        flex-direction: row;
+        padding-top: 10px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .empty-lft, .empty-rht {
+        background-image: url("../images/lynx.png"), linear-gradient(to bottom, #b9c3b9, white);
+        /* NB: 2 achtergronden; een plaatje en een gradient overelkaar*/
+        background-size: 75px, contain;
+        background-position: center;
+        background-repeat: repeat-y;
+        background-blend-mode: soft-light;
+        /*laat zwarte footprints als donkere tint verschijnen over gradient*/
+    }
+}
+
+/* Home Page ==================================================*/
+.hero-one, .hero-two {
+    font-size: 24px;
+    padding: 10px;
+    background-color: #b9c3b9;
+    border-radius: 20px;
+}
+
+.intro-one, .intro-two {
+    font-size: 24px;
+    padding: 50px 10px;
+    background-color: #b9c3b9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cat-img {
+    height: auto;
+    width: 100px;
+    margin: auto;
+}
+
+.giphies {
+    display: flex;
+    justify-content: center;
+    padding: 20px, 0px;
+}
+
+.giphy-embed {
+    width: 80px;
+    margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .giphy-embed {
+        width: 100px;
+        margin: auto;
+    }
+
+    .hero-img {
+        width: 400px;
+    }
+}
+
+/* Blog/Contact Page ==========================================*/
+.blog-container, .contact-container {
+    font-size: 12px;
+    padding: 10px;
+    background-color: #b9c3b9;
+}
+
+/* Video Page =================================================*/
+.video-viewport {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    overflow: hidden;
+}
+
+.videoBg {
+    /* grid-area: var(--fullGrid); */
+    z-index: 0;
+    min-width: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.overlay {
+    z-index: 1;
+    position: absolute;
+    /* width: 100%;
+    height: 50%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay h1 {
+    font-size: 6em;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #ffffff66;
+    color: #ffffff00; /*#b9c3b9;*/
+}
+
+.overlay h2 {
+    font-size: 3em;
+    font-weight: lighter;
+    color: #00000066; /*#b9c3b9;*/
+}
+
+/* Grid Areas =================================================*/
+.header {
+    grid-area: header;
+}
+
+.footer {
+    grid-area: footer;
 }
 
 .empty-lft {
@@ -98,60 +199,18 @@ margin: auto;
 
 .intro-one {
     grid-area: intro-one;
-
 }
 
 .hero-two {
     grid-area: hero-two;
 }
 
-.intro-two {
-    grid-area: intro-two;
-
+.video-viewport {
+    grid-area: video-viewport;
 }
-.giphies {
-    display: flex;
-    justify-content: center;
-    padding: 20px, 0px;
+.blog-container {
+    grid-area: blog-container;
 }
-
-.giphy-embed {
-    width: 80px;
-    margin: auto;
-}
- @media screen and (min-width: 768px) {
-    .giphy-embed   {
-        width: 100px;
-        margin: auto;
-    }
-    .hero-img{
-        width: 400px;
-    }
- }
-.footer {
-    grid-area: footer;
-
-}
-.footer a {
-    font-size: 48px;
-    text-decoration: none;
-    color: white;
-}
-@media screen and (min-width:768px) {
-    .empty-lft, .empty-rht {
-        background-image: url("../images/lynx.png"), linear-gradient(to bottom, #b9c3b9, white);
-        /* NB: 2 achtergronden; een plaatje en een gradient overelkaar*/
-        background-size: 75px, contain;
-        background-position: center;
-        background-repeat: repeat-y;
-        background-blend-mode: soft-light; /*laat zwarte footprints als donkere tint verschijnen over gradient*/
-    }
-}
-
-/*Logo naast navbar op grotere schermen (bij mobile was onder elkaar) */
-@media screen and (min-width:768px) {
-    .header {
-        flex-direction: row;
-        padding-top: 10px;
-    }
+.contact-container {
+    grid-area: contact-container;
 }
