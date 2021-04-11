@@ -192,7 +192,9 @@ body, html {
 .empty-lft {
     grid-area: empty-lft;
 }
-
+.empty-rht {
+    grid-area: empty-rht;
+}
 .hero-one {
     grid-area: hero-one;
 }
@@ -200,7 +202,9 @@ body, html {
 .intro-one {
     grid-area: intro-one;
 }
-
+.intro-two {
+    grid-area: intro-two;
+}
 .hero-two {
     grid-area: hero-two;
 }
