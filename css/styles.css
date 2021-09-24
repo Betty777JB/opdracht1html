@@ -8,8 +8,8 @@ body, html {
     font-family: "Montserrat", "sans-serif";
 }
 
-.header, .footer {
-    font-size: 24px;
+header, footer{
+    font-size: 40px;
     padding: 10px;
     background-color: #b9c3b9;
 }
@@ -21,7 +21,7 @@ body, html {
     border-color: #b9c3b9;
 }
 
-.header {
+header {
     /* background: #7f1a40; mooi kleur*/
     grid-area: header;
     display: flex;
@@ -31,20 +31,20 @@ body, html {
     padding: 0px 10vw 0 10vw;
 }
 
-.navbar {
+nav {
     list-style: none;
     margin:0;
     padding: 0;
     display: flex;
 }
 
-.navbar a {
+nav a {
     text-decoration: none;
     color: black;
     display: block;
 }
 
-.navbar li {
+nav li {
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -55,11 +55,11 @@ body, html {
     margin-right: 10px;
 }
 
-.footer {
+footer {
     grid-area: footer;
 }
 
-.footer a {
+footer a {
     font-size: 48px;
     text-decoration: none;
     color: white;
@@ -67,7 +67,7 @@ body, html {
 
 /*Logo naast navbar op grotere schermen (bij mobile was onder elkaar) */
 @media screen and (min-width:768px) {
-    .header {
+    header {
         flex-direction: row;
         padding-top: 10px;
     }
@@ -181,11 +181,11 @@ body, html {
 }
 
 /* Grid Areas =================================================*/
-.header {
+header {
     grid-area: header;
 }
 
-.footer {
+footer {
     grid-area: footer;
 }
 
